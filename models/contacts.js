@@ -1,22 +1,3 @@
-// // const fs = require('fs/promises')
-
-// const listContacts = async () => {}
-
-// const getContactById = async (contactId) => {}
-
-// const removeContact = async (contactId) => {}
-
-// const addContact = async (body) => {}
-
-// const updateContact = async (contactId, body) => {}
-
-// module.exports = {
-//   listContacts,
-//   getContactById,
-//   removeContact,
-//   addContact,
-//   updateContact,
-// }
 const {Schema, model} = require("mongoose");
 const Joi = require("joi");
 
@@ -30,9 +11,7 @@ const userSchema = Schema({
     },
     email: {
       type: String,
-      // required: [true, "price must be exist"],
         required: true,
-        // min: 0.01
     },
     phone: {
         type: Number,
