@@ -14,6 +14,7 @@ router.post("/", validation(joiSchema), ctrlWrapper(ctrl.add));
 
 router.put("/:id", validation(joiSchema), ctrlWrapper(ctrl.updateById));
 
+router.patch("/:id/favorite", ctrlWrapper(ctrl.updateStatusContact));
 
 router.delete("/:id", ctrlWrapper(ctrl.removeById));
 

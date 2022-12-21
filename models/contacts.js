@@ -5,7 +5,7 @@ const Joi = require("joi");
 const userSchema = Schema({
     name: {
         type: String,
-        required: true,
+        required: [true, 'Set name for contact'],
         minlength: 2,
         maxlength: 10
     },
@@ -21,7 +21,7 @@ const userSchema = Schema({
   },
     favorite: {
         type: Boolean,
-        default: true
+        default: false
     },
 
 }, {versionKey: false, timestamps: true});
