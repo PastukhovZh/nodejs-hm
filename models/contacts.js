@@ -32,37 +32,10 @@ const joiSchema = Joi.object({
       }).required(),
   phone: Joi.number().min(7).required(),
     favorite: Joi.bool(),
-    // status: Joi.string().valid("basic", "sale", "stock"),
-    // code: Joi.string().pattern(codeRegexp)
 });
-
-// const statusJoiSchema = Joi.object({
-//     status: Joi.string().valid("basic", "sale", "stock").required()
-// })
-
 const Contact = model("contact", userSchema);
 
 module.exports = {
     Contact,
     joiSchema,
-    // statusJoiSchema
 }
-
-//   const result = schema.validate(req.body)
-//   if (result.error) {
-//   return res.status(400).json({ message: result.error.details})
-//   }
-//       const {
-//     name,
-//     email,
-//     phone,
-//   } = req.body
-  
-//   contacts.push({
-//     id:Math.random().toFixed(2),
-//     name,
-//     email,
-//     phone,
-//   })
-//   res.status(201).json({ contacts, message: 'New contact was created' })
-// })
